@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Student Forms</title>
+  <title>Enrollment Forms</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -24,7 +24,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="Students.html" class="nav-link">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -38,8 +38,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../index.html" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PUP Student Database</span>
     </a>
 
@@ -48,10 +48,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">2022-06399-MN-0</a>
+          <a href="#" class="d-block">Administrator</a>
         </div>
       </div>
       
@@ -60,26 +60,36 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="Students.html" class="nav-link">
-              <i class="fas fa-users nav-icon"></i>
-              <p>Students</p>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-school"></i>
+              <p>
+                Enrollment System
+                <i class="right fas fa-angle-left"></i>
+              </p>
             </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="widgets.html" class="nav-link active">
-                <i class="fas fa-file nav-icon"></i>
-                <p>Forms</p>
-              </a>
-            </li>
-
-            <li class="nav-item">
-                <a href="records.html" class="nav-link">
-                  <i class="fas fa-folder nav-icon"></i>
-                  <p>Student Records</p>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                  <i class="fas fa-home nav-icon ml-3"></i>
+                  <p>Home</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="forms.html" class="nav-link active">
+                  <i class="fas fa-file-signature nav-icon ml-3"></i>
+                  <p>Enrollment Form</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="records.html" class="nav-link">
+                  <i class="fas fa-folder nav-icon ml-3"></i>
+                  <p>Student Record</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+		</ul>
 
     <!-- /.sidebar -->
   </aside>
@@ -116,68 +126,65 @@
                   <div class="row">
                     <div class="col-4">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">First Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                        <label class="required" for="firstName">First Name</label>
+                        <input type="firstName" class="form-control" id="firstName" placeholder="Enter First Name" required>
                       </div>
                     </div>
                     <div class="col-3">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Middle Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Middle Name">
+                        <label class="required" for="middleName">Middle Name</label>
+                        <input type="middleName" class="form-control" id="middleName" placeholder="Enter Middle Name" required>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Last Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Last Name">
+                        <label class="required" for="lastName">Last Name</label>
+                        <input type="lastName" class="form-control" id="lastName" placeholder="Enter Last Name" required>
                       </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Sex</label>
-                        <select class="form-control">
-                          <option>Male</option>
-                          <option>Female</option>
-                         </select>
+                        <label class="required" for="sex">Sex</label>
+                        <select class="form-control" required>
+							<option value="" disabled selected hidden>Select...</option>
+							<option>Male</option>
+							<option>Female</option>
+                        </select>
                       </div>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-3">
-                    <div class="form-group">
-                      <label>Birthdate:</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                            </div>
+						<div class="form-group">
+                          <label class="required" for="birthdate">Date of Birth</label>
+                          <input type="date" class="form-control" id="birthdate" required>
                         </div>
-                    </div>
-                  </div>
+					</div>
                       
 
                     <div class="col-2">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Age</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Age">
+                        <label class="required" for="age">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter Age" required>
                       </div>
                     </div>
                     <div class="col-2">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Civil Status</label>
-                        <select class="form-control">
-                          <option>Single</option>
-                          <option>Married</option>
-                          <option>Widowed</option>
-                          <option>Separated</option>
+                        <label class="required" for="civilStatus">Civil Status</label>
+                        <select class="form-control" required>
+							<option value="" disabled selected hidden>Select...</option>
+							<option>Single</option>
+							<option>Married</option>
+							<option>Widowed</option>
+							<option>Separated</option>
                       </select>
                       </div>
                     </div>
                     <div class="col-5">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Nationality</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Nationality">
+                        <label class="required" for="nationality">Nationality</label>
+                        <input type="nationality" class="form-control" id="nationality" placeholder="Enter Nationality" required>
                       </div>
                     </div>
                   </div>
@@ -193,52 +200,52 @@
                   <div class="row">
                     <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">House/Block/Lot No.</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="House/Block/Lot No.">
+                      <label class="required" for="address">House/Block/Lot No.</label>
+                      <input type="address" class="form-control" id="address" placeholder="Enter House/Block/Lot No." required>
                     </div>
                     </div>
                     <div class="col-3">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Street</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Street">
+                        <label class="required" for="address">Street</label>
+                        <input type="address" class="form-control" id="address" placeholder="Enter Street" required>
                       </div>
                       </div>
                       <div class="col-3">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Subdivision/Village</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Subdivision/Village">
+                          <label class="required" for="address">Subdivision/Village</label>
+                          <input type="address" class="form-control" id="address" placeholder="Enter Subdivision/Village" required>
                         </div>
                         </div>
                         <div class="col-3">
                           <div class="form-group">
-                            <label for="exampleInputEmail1">Village</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Village">
+                            <label class="required" for="address">Village</label>
+                            <input type="address" class="form-control" id="address" placeholder="Enter Village" required>
                           </div>
                         </div>
                   </div>
                   <div class="row">
                     <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">City/Town</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Current Address">
+                      <label class="required" for="address">City/Town</label>
+                      <input type="address" class="form-control" id="address" placeholder="Enter City/Town" required>
                     </div>
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Province/State</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Current Address">
+                      <label class="required" for="province">Province/State</label>
+                      <input type="province" class="form-control" id="province" placeholder="Enter Province/State" required>
                     </div>
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Region</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Current Address">
+                      <label class="required" for="region">Region</label>
+                      <input type="region" class="form-control" id="region" placeholder="Enter Region" required>
                     </div>
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">ZIP Code</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Current Address">
+                      <label class="required" for="zipcode">ZIP Code</label>
+                      <input type="zipcode" class="form-control" id="zipcode" placeholder="Enter ZIP Code" required>
                     </div>
                   </div>
                   </div>
@@ -246,55 +253,65 @@
                   <div class="row">
                     <div class="col-12">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Contact Details</label>
+                      <label for="contact">Contact Details</label>
                     </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email@domain.com">
-                    </div>
+                      <label class="required" for="emailAdd">Email Address</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="emailAdd" placeholder="Email Address" required>
+                      </div>
                     </div>
                     <div class="col-4">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Telephone No.</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ex. (000)-111-2222">
-                      </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Mobile No.</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ex. 09123456789">
+                      <label class="required" for="teleNo">Telephone No.</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-phone"></i></span>
                         </div>
+                        <input type="teleNo" class="form-control" id="teleNo" placeholder="Telephone No." required>
+                      </div>
+                    </div>
+					<div class="col-4">
+                      <label class="required" for="cellNo">Cellphone No.</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-mobile"></i></span>
                         </div>
+                        <input type="cellNo" class="form-control" id="cellNo" placeholder="Cellphone No." required>
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-12">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Course and Program</label>
+                      <label for="courseAndProgram">Course and Program</label>
                     </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-3">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Course</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ex. Bachelor of Science">
+                      <label class="required" for="course">Course</label>
+                      <input type="course" class="form-control" id="course" placeholder="Ex. Bachelor of Science" required>
                     </div>
                     </div>
                     <div class="col-3">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Program</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ex. Computer Science">
+                        <label class="required" for="program">Program</label>
+                        <input type="program" class="form-control" id="program" placeholder="Ex. Computer Science" required>
                       </div>
                       </div>
                       <div class="col-3">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Year</label>
-                          <select class="form-control">
-                            <option>1st</option>
+                          <label class="required" for="year">Year</label>
+                          <select class="form-control" required>
+                            <option value="" disabled selected hidden>Select...</option>
+							<option>1st</option>
                             <option>2nd</option>
                             <option>3rd</option>
                             <option>4th</option>
@@ -305,9 +322,10 @@
                       
                       <div class="col-3">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Semester</label>
-                          <select class="form-control">
-                            <option>1st Semester</option>
+                          <label class="required" for="sem">Semester</label>
+                          <select class="form-control" required>
+                            <option value="" disabled selected hidden>Select...</option>
+							<option>1st Semester</option>
                             <option>2nd Semester</option>
                         </select>
                         </div>
@@ -316,7 +334,7 @@
                   <div class="row">
                     <div class="col-6">
                     <div class="form-group">
-                      <label for="exampleInputFile">Picture 2x2</label>
+                      <label class="required" for="exampleInputFile">Picture 2x2</label>
                       <div class="input-group">
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" id="exampleInputFile">
@@ -330,7 +348,7 @@
                   </div>
                   <div class="col-6">
                     <div class="form-group">
-                      <label for="exampleInputFile">Digital Signature</label>
+                      <label class="required" for="exampleInputFile">Digital Signature</label>
                       <div class="input-group">
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" id="exampleInputFile">
