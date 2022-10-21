@@ -9,31 +9,43 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     </head>
 
+    <!-- BODY -->
     <body>
-        <nav class="navbar navbar-expand-sm navbar-light bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">PCOS Detect</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
-                    aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarID">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a> 
-                    </div>
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">About</a> 
-                    </div>
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Tool</a> 
+        <!-- MAIN -->
+        <main class="w-full h-full">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-danger rounded-bottom">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Home</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                        aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarID">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">Tool</a> 
+                        </div>
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">About</a> 
+                        </div>
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">How To</a> 
+                        </div>
                     </div>
                 </div>
+            </nav>
+            <!-- HEADER -->
+            <div class="p-3 row row-cols-2 items-center container-fluid border-black">
+                <h1 class="p-2 m-2">PCOS DIAGNOSING TOOL</h1>
             </div>
-        </nav>
-    <div class="p-5 items-center container-fluid border-black">
-        <h1>PCOS detection tool</h1>
-        <a class="btn btn-success btn-xl " href="/WebsiteThesis/tool.html" role="button">Start</a>
-    </div>
-    
+            <!-- IMAGE -->
+            <div class="row row-cols-2 p-3 m-2">
+                <img src="/public/ovary.jpg" class="img-thumbnail border border-dark" alt="ovary">
+                <div class="p-5">
+                    <p class="d-flex fs-2 justify-content">This tool will diagnose if the patient is infected with Polycystic Ovary Syndrome by examining physical and clinical assessment of the patient using the machine learning models SVM and Decision Tree</p>
+                    <a class="btn btn-danger btn-xl bg-danger" href="/WebsiteThesis/tool.html" role="button">Start</a>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
